@@ -31,7 +31,7 @@ mqtt_server = "192.168.142.66"
 def connect_and_subscribe():
   global client_id, mqtt_server, topic_sub
   client = MQTTClient(client_id, mqtt_server)
-  client.set_last_will(topic='hack43/tele/loungeledjes/status',msg='offline',retain=True)
+  client.set_last_will(topic='hack42/tele/loungeledjes/status',msg='offline',retain=True)
   client.connect()
   client.publish('hack42/tele/loungeledjes/ifconfig', str(sta_if.ifconfig() ), retain = True)
   client.publish('hack42/tele/loungeledjes/status','online',retain = True)
