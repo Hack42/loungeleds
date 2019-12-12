@@ -24,7 +24,7 @@ class RunLeds(object):
     def on_message(self,client, userdata, msg):
         if msg.topic == "hack42/state":
             self.spacestate = msg.payload
-            print self.spacestate
+            print(self.spacestate)
             if self.spacestate != self.oldspacestate:
                  self.lampjes = self.default if self.spacestate == "open" else "black"
                  self.change = 1
@@ -68,7 +68,7 @@ class RunLeds(object):
                          self.sock.sendto("\xFF\xFF\x00",  (self.UDP_IP, self.UDP_PORT))
                      time.sleep(tijd*(5 if self.devmode else 1) if tijd>0.04 else 0.04)
                  if self.change == 1:
-                   print "Switching",self.spacestate
+                   print("Switching",self.spacestate)
                    self.change = 0
                  else: 
                    self.lampjes = self.default if self.spacestate == "open" else "black"
@@ -76,7 +76,7 @@ class RunLeds(object):
                  break
              except:
                  import traceback
-                 print traceback.format_exc()
+                 print(traceback.format_exc())
                  self.lampjes = self.default if self.spacestate == "open" else "black"
 
 

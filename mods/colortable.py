@@ -1,7 +1,7 @@
 def colortable(width):
     kleurtabel = []
 
-    step = 1530 / width
+    step = int (1530 / width)
     rood = 255
     blauw = 0
     groen = 0
