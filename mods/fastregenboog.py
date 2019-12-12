@@ -33,7 +33,7 @@ def run():
     while True:
        for ledje in range(0,aantal):
            data += chr(kleurtabel[ledje][1]) + chr(kleurtabel[ledje][0]) + chr(kleurtabel[ledje][2])
-       yield (0.2,data)
+       yield (0.05,data)
        data = b""
        x = kleurtabel.pop(0)
        kleurtabel = kleurtabel + [ x ]

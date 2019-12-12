@@ -4,26 +4,26 @@ def run():
     kleurtabel = []
     
     step = 4
-    rood = 255
+    rood = 128
     blauw = 0
     groen = 0
-    for i in range(0,255,step):
+    for i in range(0,128,step):
         groen = i
         kleurtabel += [ [rood, groen, blauw] ]
-    for i in range(0,255,step):
-        rood = 255 - i
+    for i in range(0,128,step):
+        rood = 128 - i
         kleurtabel += [ [rood, groen, blauw] ]
-    for i in range(0,255,step):
+    for i in range(0,128,step):
         blauw = i
         kleurtabel += [ [rood, groen, blauw] ]
-    for i in range(0,255,step):
-        groen = 255 - i
+    for i in range(0,128,step):
+        groen = 128 - i
         kleurtabel += [ [rood, groen, blauw] ]
-    for i in range(0,255,step):
+    for i in range(0,128,step):
         rood = i
         kleurtabel += [ [rood, groen, blauw] ]
-    for i in range(0,255,step):
-        blauw = 255 - i
+    for i in range(0,128,step):
+        blauw = 128 - i
         kleurtabel += [ [rood, groen, blauw] ]
     
     while len(kleurtabel) < aantal:
