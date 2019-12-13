@@ -3,6 +3,10 @@ startx = 48
 starty = 21
 lastpixel = 0
 def pixmap():
+    global startx,starty,lastpixel
+    startx = 48
+    starty = 21
+    lastpixel = 0
     pixmap = []
     for y in range(0,50):
       pixmap.append( [-1] * 70)
